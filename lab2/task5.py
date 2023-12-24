@@ -1,3 +1,4 @@
+# ссылка на open_data.csv https://disk.yandex.ru/d/zt_teap33StlMg
 import csv, msgpack, os, pickle, json
 import pandas as pd
 
