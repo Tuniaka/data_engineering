@@ -5,7 +5,7 @@ def matrix_calculation(source_path):
 	matrix = np.load(source_path)
 	
 	norm_matrix = (matrix - np.mean(matrix)) / np.std(matrix)
-	np.save('result/task1/result.npy', norm_matrix)
+	np.save('lab2/result/task1/result.npy', norm_matrix)
 	result = {'sum': int(np.sum(matrix)),
 		      'avr': float(np.mean(matrix)),
 		      'sumMD': int(np.sum(np.diag(matrix))),
@@ -15,10 +15,10 @@ def matrix_calculation(source_path):
 		      'max': int(np.max(matrix)),
 		      'min': int(np.min(matrix))}
 	
-	with open('result/task1/result.json', 'w') as f:
+	with open('lab2/result/task1/result.json', 'w') as f:
 		json.dump(result, f)
         
 		
 
 if __name__ == '__main__':
-	matrix_calculation('data/matrix_75.npy')
+	matrix_calculation('lab2/data/matrix_75.npy')

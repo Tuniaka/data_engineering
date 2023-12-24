@@ -24,13 +24,13 @@ def aggregate_information(path):
 		}
 		result[name] = res
 
-	with open("result/task3/result.json", "w") as f:
+	with open("lab2/result/task3/result.json", "w") as f:
 		f.write(json.dumps(result))
 
-	with open("result/task3/result.msgpack", "wb") as f:
+	with open("lab2/result/task3/result.msgpack", "wb") as f:
 		f.write(msgpack.dumps(result))
 
 
 if __name__ == "__main__":
-	aggregate_information("data/products_75.json")
+	aggregate_information("lab2/data/products_75.json")
 	

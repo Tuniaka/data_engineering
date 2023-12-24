@@ -9,7 +9,7 @@ def load_data(path):
 	for item in data:
 		result[item['name']] = item['price']
 
-	with open('data/price_info_75.json', 'rb') as f:
+	with open('lab2/data/price_info_75.json', 'rb') as f:
 		json_data = json.load(f)
 
 	for item in json_data:
@@ -26,9 +26,9 @@ def load_data(path):
 			val -= (val * item['param'] / 100)
 			result[item['name']] = val
 
-	with open('result/task4/result.pkl', 'wb') as f:
+	with open('lab2/result/task4/result.pkl', 'wb') as f:
 		pickle.dump(result, f)
 
 
 if __name__ == '__main__':
-	load_data('data/products_75.pkl')
+	load_data('lab2/data/products_75.pkl')

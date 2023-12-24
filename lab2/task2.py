@@ -12,11 +12,11 @@ def matrix_filter(path):
                 y.append(j)
                 z.append(matrix[i, j])
 
-    np.savez('result/task2/values.npz', x, y, z)
-    np.savez_compressed('result/task2/compressed.npz', x, y, z)
+    np.savez('lab2/result/task2/values.npz', x, y, z)
+    np.savez_compressed('lab2/result/task2/compressed.npz', x, y, z)
 
-    size = os.path.getsize('result/task2/values.npz')
-    compressed_size = os.path.getsize('result/task2/compressed.npz')
+    size = os.path.getsize('lab2/result/task2/values.npz')
+    compressed_size = os.path.getsize('lab2/result/task2/compressed.npz')
 
     if size > compressed_size:
         print("values.npz больше")
@@ -28,4 +28,4 @@ def matrix_filter(path):
 
 
 if __name__ == '__main__':
-    matrix_filter('data/matrix_75_2.npy')
+    matrix_filter('lab2/data/matrix_75_2.npy')
