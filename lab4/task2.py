@@ -1,6 +1,5 @@
 import sqlite3
 import json
-import msgpack
 
 def create_table():
     with sqlite3.connect('lab4/data/base.db') as db:
@@ -57,11 +56,11 @@ def query_for_tables():
             result3 = [dict(row) for row in cursor.fetchall()]
 
         with open("lab4/result/task2/query1.json", "w", encoding="utf-8") as outfile: 
-            outfile.write(json.dumps(result1, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result1, ensure_ascii=False))
         with open("lab4/result/task2/query2.json", "w", encoding="utf-8") as outfile: 
-            outfile.write(json.dumps(result2, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result2, ensure_ascii=False))
         with open("lab4/result/task2/query3.json", "w", encoding="utf-8") as outfile: 
-            outfile.write(json.dumps(result3, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result3, ensure_ascii=False))
 
 if __name__=="__main__":
     create_table()

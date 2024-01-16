@@ -49,7 +49,7 @@ def stored_data():
             cursor.execute("SELECT * FROM Game ORDER BY tours_count LIMIT 75+10")
             result = [dict(row) for row in cursor.fetchall()]
         with open("lab4/result/task1/sorted.json", "w", encoding="utf-8") as outfile: 
-            outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result, ensure_ascii=False))
 
 def column_stat():
     with sqlite3.connect('lab4/data/base.db') as db:
@@ -67,7 +67,7 @@ def column_stat():
 				    ''')
         result = [dict(row) for row in cursor.fetchall()]
         with open('lab4/result/task1/stat.json', 'w', encoding='utf-8') as outfile:
-            outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result, ensure_ascii=False))
 
 def frequency_stat():
     with sqlite3.connect('lab4/data/base.db') as db:
@@ -82,7 +82,7 @@ def frequency_stat():
             """)
             result = [dict(row) for row in cursor.fetchall()]
         with open('lab4/result/task1/frequency.json', 'w', encoding='utf-8') as outfile:
-            outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result, ensure_ascii=False))
 
 def sorted_predicate():
     with sqlite3.connect('lab4/data/base.db') as db:
@@ -92,7 +92,7 @@ def sorted_predicate():
             cursor.execute("SELECT * FROM Game WHERE tours_count > 10 ORDER BY min_rating LIMIT 75+10")
             result = [dict(row) for row in cursor.fetchall()]
         with open('lab4/result/task1/predicate.json', 'w', encoding='utf-8') as outfile:
-            outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result, ensure_ascii=False))
 if __name__ == "__main__":
     create_table()
     insert_data()

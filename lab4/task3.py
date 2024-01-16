@@ -64,7 +64,7 @@ def sort_tempo():
            cursor.execute(select_query)
            result = [dict(row) for row in cursor.fetchall()]
     with open('lab4/result/task3/sort_tempo.json', 'w', encoding='utf-8') as outfile:
-        outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+        outfile.write(json.dumps(result, ensure_ascii=False))
 
 def get_stat():
     with sqlite3.connect('lab4/data/task3.db') as db:
@@ -81,7 +81,7 @@ def get_stat():
 				        ''')
             result = [dict(row) for row in cursor.fetchall()]
         with open('lab4/result/task3/stat_data.json', 'w', encoding='utf-8') as outfile:
-            outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+            outfile.write(json.dumps(result, ensure_ascii=False))
 
 def get_freq():
     with sqlite3.connect('lab4/data/task3.db') as db:
@@ -96,7 +96,7 @@ def get_freq():
                            """)
     result = [dict(row) for row in cursor.fetchall()]
     with open('lab4/result/task3/frequency.json', 'w', encoding='utf-8') as outfile:
-        outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+        outfile.write(json.dumps(result, ensure_ascii=False))
 
 def get_filter():
     with sqlite3.connect('lab4/data/task3.db') as db:
@@ -110,7 +110,7 @@ def get_filter():
                            """)
     result = [dict(row) for row in cursor.fetchall()]
     with open('lab4/result/task3/filtered.json', 'w', encoding='utf-8') as outfile:
-        outfile.write(json.dumps(result, ensure_ascii=False)[1:-1])
+        outfile.write(json.dumps(result, ensure_ascii=False))
 
 if __name__=="__main__":
     create_base()
