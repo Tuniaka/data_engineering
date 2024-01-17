@@ -56,7 +56,7 @@ def column_stat():
         cursor = db.cursor()
         cursor.row_factory = sqlite3.Row
         with db:
-            results = cursor.execute(
+            result = cursor.execute(
 				    '''
 				    SELECT
 				    SUM(min_rating) as sum,
