@@ -1,5 +1,6 @@
 import pymongo
 import json
+from bson.json_util import dumps, loads
 
 if __name__ == "__main__":
 	objects = []
@@ -72,21 +73,19 @@ if __name__ == "__main__":
 	with open('lab5/result/task2/res5.json', 'w', encoding='utf-8') as outfile:
 		outfile.write(json.dumps(result, ensure_ascii=False))
 
-	# query = collection.aggregate([{'$sort': {'age': 1,
-    #                                         'salary': -1
-    #                                         }},{'$limit': 1}])
-	# result = list(query)
-	# print(result)
-	# with open('lab5/result/task2/res6.json', 'w', encoding='utf-8') as outfile:
-	# 	outfile.write(json.dumps(result, ensure_ascii=False))
+	query = collection.aggregate([{'$sort': {'age': 1,
+                                            'salary': -1
+                                            }},{'$limit': 1}])
+	result = list(query)
+	with open('lab5/result/task2/res6.json', 'w', encoding='utf-8') as outfile:
+		outfile.write(dumps(result, ensure_ascii=False))
 
-	# query = collection.aggregate([{'$sort': {'age': -1,
-    #                                         'salary': 1
-    #                                         }},{'$limit': 1}])
-	# result = list(query)
-	# print(result)
-	# with open('lab5/result/task2/res7.json', 'w', encoding='utf-8') as outfile:
-	# 	outfile.write(json.dumps(result, ensure_ascii=False))
+	query = collection.aggregate([{'$sort': {'age': -1,
+                                            'salary': 1
+                                            }},{'$limit': 1}])
+	result = list(query)
+	with open('lab5/result/task2/res7.json', 'w', encoding='utf-8') as outfile:
+		outfile.write(dumps(result, ensure_ascii=False))
 
 	query = collection.aggregate(
 		[{'$match':{'salary': {'$gt': 50000}}},
