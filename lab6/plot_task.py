@@ -107,10 +107,10 @@ if __name__ == "__main__":
     # task4
     df4 = task_ex(f_names[3],3+1,f_colums[3])
     # linear_plot(df4, "id", "salary_from", 'plot1', 'lab6/result/task4/1.png')
-    bar_plot(df4, "employer_id", "salary_to", 'plot2', 'lab6/result/task4/2.png')
-    plot_step(df4, "experience_id", "accept_incomplete_resumes", 'plot3', 'lab6/result/task4/3.png')
-    scatter_plot(df4, "salary_from","salary_to", 'plot4', 'lab6/result/task4/4.png')
-    plot_histogram(df4, "id", "employer_id", 'plot5', 'lab6/result/task4/5.png')
+    # linear_plot(df4, "id", "salary_to", 'plot2', 'lab6/result/task4/2.png')
+    # plot_step(df4, "experience_id", "accept_incomplete_resumes", 'plot3', 'lab6/result/task4/3.png')
+    # scatter_plot(df4, "salary_from","salary_to", 'plot4', 'lab6/result/task4/4.png')
+    # plot_histogram(df4, "id", "employer_id", 'plot5', 'lab6/result/task4/5.png')
     
     
     # task5

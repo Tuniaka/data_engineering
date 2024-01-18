@@ -2,7 +2,7 @@ from bson.json_util import dumps, loads
 import pandas as pd
 import json
 
-def get_memory_stat(dataset, filename):
+def get_stat(dataset, filename):
     memory_stat = dataset.memory_usage(deep=True)
     total_memory = memory_stat.sum()
     column_stat = []
@@ -18,7 +18,7 @@ def get_memory_stat(dataset, filename):
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(json.dumps(column_stat,  default=str))
 
-def convert_to_categorial_values(dataframe):
+def convert_to_categorial(dataframe):
     result = pd.DataFrame()
     dataset_obj = dataframe.select_dtypes(include=['object']).copy()
     for column in dataset_obj.columns:
@@ -33,7 +33,7 @@ def cast_type(dataframe, from_type,to_type):
     return dataset.apply(pd.to_numeric, downcast = to_type)
 
 def optimize_dataset(dataset):
-    converted_obj = convert_to_categorial_values(dataset)
+    converted_obj = convert_to_categorial(dataset)
     opt_int = cast_type(dataset,'int','unsigned')
     opt_float = cast_type(dataset,'float','float')
     result = dataset.copy()
