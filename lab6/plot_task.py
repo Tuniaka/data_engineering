@@ -11,9 +11,9 @@ def task_ex(name, number, colums):
 
     dataset = pd.read_csv(filename)
     os.makedirs(f'lab6/result/task{number}', exist_ok=True)
-    get_memory_stat(dataset, f'lab6/result/task{number}/stat.json')
+    get_stat(dataset, f'lab6/result/task{number}/stat.json')
     optimized_dataset = optimize_dataset(dataset)
-    get_memory_stat(optimize_dataset(dataset), f'lab6/result/task{number}/stat_optimized.json')
+    get_stat(optimize_dataset(dataset), f'lab6/result/task{number}/stat_optimized.json')
 
     column_types = {}
     use_columns = colums
@@ -65,36 +65,9 @@ if __name__ == "__main__":
     # linear_plot(df2, "dealerID", "mileage", 'plot1', 'lab6/result/task2/1.png')
     # bar_plot(df2, "vf_FuelTypeSecondary", "askPrice", 'plot2', 'lab6/result/task2/2.png')
     # plot_step(df2, "vf_FuelTypePrimary", "askPrice", 'plot3', 'lab6/result/task2/3.png')
+    # scatter_plot(df2, "dealerID","vf_FuelTypePrimary", 'plot4', 'lab6/result/task2/4.png')
+    # plot_histogram(df2, "dealerID","msrp", 'plot5', 'lab6/result/task2/5.png')
 
-    # scatter_plot(df2, "firstSeen", "lastSeen", 'plot1', 'lab6/result/task4/1_1.png')
-    # scatter_plot(df2, "lastSeen","stockNum", 'plot1', 'lab6/result/task4/1_2.png')
-    # scatter_plot(df2, "stockNum", "msrp", 'plot1', 'lab6/result/task4/1_3.png')
-    # scatter_plot(df2, "msrp", "askPrice", 'plot1', 'lab6/result/task4/1_4.png')
-    # scatter_plot(df2, "askPrice", "dealerID", 'plot1', 'lab6/result/task4/1_5.png')
-    # scatter_plot(df2, "dealerID", "mileage", 'plot1', 'lab6/result/task4/1_6.png')
-    # scatter_plot(df2, "mileage", "isNew", 'plot1', 'lab6/result/task4/1_7.png')
-    # scatter_plot(df2, "isNew","vf_FuelTypePrimary", 'plot1', 'lab6/result/task4/1_8.png')
-    # scatter_plot(df2, "vf_FuelTypePrimary", "vf_FuelTypeSecondary", 'plot1', 'lab6/result/task4/1_9.png')
-    # scatter_plot(df2, "lastSeen","firstSeen", 'plot1', 'lab6/result/task4/1_10.png')
-    # scatter_plot(df2, "lastSeen","msrp", 'plot1', 'lab6/result/task4/1_11.png')
-    # scatter_plot(df2, "lastSeen","askPrice", 'plot1', 'lab6/result/task4/1_12.png')
-    # scatter_plot(df2, "lastSeen","mileage", 'plot1', 'lab6/result/task4/1_13.png')
-    # scatter_plot(df2, "lastSeen","vf_FuelTypePrimary", 'plot1', 'lab6/result/task4/1_14.png')
-
-    # plot_histogram(df2, "firstSeen", "lastSeen", 'plot1', 'lab6/result/task5/1_1.png')
-    # plot_histogram(df2, "lastSeen","stockNum", 'plot1', 'lab6/result/task5/1_2.png')
-    # plot_histogram(df2, "stockNum", "msrp", 'plot1', 'lab6/result/task5/1_3.png')
-    # plot_histogram(df2, "msrp", "askPrice", 'plot1', 'lab6/result/task5/1_4.png')
-    # plot_histogram(df2, "askPrice", "dealerID", 'plot1', 'lab6/result/task5/1_5.png')
-    # plot_histogram(df2, "dealerID", "mileage", 'plot1', 'lab6/result/task5/1_6.png')
-    # plot_histogram(df2, "mileage", "isNew", 'plot1', 'lab6/result/task5/1_7.png')
-    # plot_histogram(df2, "isNew","vf_FuelTypePrimary", 'plot1', 'lab6/result/task5/1_8.png')
-    # plot_histogram(df2, "vf_FuelTypePrimary", "vf_FuelTypeSecondary", 'plot1', 'lab6/result/task5/1_9.png')
-    # plot_histogram(df2, "lastSeen","firstSeen", 'plot1', 'lab6/result/task5/1_10.png')
-    # plot_histogram(df2, "lastSeen","msrp", 'plot1', 'lab6/result/task5/1_11.png')
-    # plot_histogram(df2, "lastSeen","askPrice", 'plot1', 'lab6/result/task5/1_12.png')
-    # plot_histogram(df2, "lastSeen","mileage", 'plot1', 'lab6/result/task5/1_13.png')
-    # plot_histogram(df2, "lastSeen","vf_FuelTypePrimary", 'plot1', 'lab6/result/task5/1_14.png')
 
     #  task3
     # df3 = task_ex(f_names[2],2+1,f_colums[2])
@@ -105,7 +78,7 @@ if __name__ == "__main__":
     # plot_histogram(df3, "DEPARTURE_TIME","FLIGHT_NUMBER", 'plot5', 'lab6/result/task3/5.png')
 
     # task4
-    df4 = task_ex(f_names[3],3+1,f_colums[3])
+    # df4 = task_ex(f_names[3],3+1,f_colums[3])
     # linear_plot(df4, "id", "salary_from", 'plot1', 'lab6/result/task4/1.png')
     # linear_plot(df4, "id", "salary_to", 'plot2', 'lab6/result/task4/2.png')
     # plot_step(df4, "experience_id", "accept_incomplete_resumes", 'plot3', 'lab6/result/task4/3.png')
