@@ -1,0 +1,1 @@
+{"firstSeen": "category", "lastSeen": "category", "stockNum": "category", "msrp": "uint32", "askPrice": "uint32", "dealerID": "uint16", "mileage": "uint32", "isNew": "bool", "vf_FuelTypePrimary": "category", "vf_FuelTypeSecondary": "category"}

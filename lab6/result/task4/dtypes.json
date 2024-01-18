@@ -1,0 +1,1 @@
+{"id": "uint32", "key_skills": "category", "schedule_name": "category", "experience_id": "category", "experience_name": "category", "employer_id": "float32", "salary_from": "float32", "salary_to": "float32", "type_name": "category", "accept_incomplete_resumes": "bool"}

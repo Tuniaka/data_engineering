@@ -1,0 +1,1 @@
+{"spkid": "uint32", "name": "category", "class": "category", "diameter": "float32", "albedo": "float32", "e": "float32", "a": "float64", "q": "float32", "i": "float32", "om": "float32"}

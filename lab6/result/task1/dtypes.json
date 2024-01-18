@@ -1,0 +1,1 @@
+{"v_game_number": "uint8", "h_score": "uint8", "v_score": "uint8", "v_line_score": "category", "h_line_score": "category", "v_at_bats": "float32", "v_hits": "float32", "v_homeruns": "float32", "v_rbi": "float32", "v_walks": "float32"}
